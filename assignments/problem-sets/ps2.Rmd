@@ -1,6 +1,6 @@
 ---
 title: "POLI 30 D"
-author: "Your Name Here"
+author: Teuilatausala Moa
 output: html_document
 ---
 
@@ -33,17 +33,17 @@ In this problem set, we will practice loading, making sense of data, and underst
 
 ### 1. Considering that the dataset we are analyzing comes from a randomized experiment, what can we compute to estimate the average causal effect of having a female politician on the number of new (or repaired) drinking water facilities? Please provide the name of the estimator. (1 point)
 
-**Answer**: Answers here.
+The average or mean estimator is the factor to compute in order to estimate the average causal effect of having a female politician.
 
 ---
 
 ### 2. In this dataset, what is the average number of new (or repaired) drinking water facilities in villages with a female politician? Please answer with a full sentence. (1 point)
 
 ```{r}
-## Coding answers here
+## 23.9907
 ```
 
-**Answer**: Answers here.
+**Answer**: mean(indiawater[indiafemale == 1])
 
 (Hint: we use `[]` to subset a variable; inside the square brackets, we specify the selection criterion. For example, we can use the relational operator `==` to set a logical test; only the observations for which the logical test is true will be extracted.) 
 
@@ -53,21 +53,20 @@ In this problem set, we will practice loading, making sense of data, and underst
 ### 3. What is the average number of new (or repaired) drinking water facilities in villages with a male politician? Please answer with a full sentence. (1 point)
 
 ```{r}
-## Coding answers here
+## mean(india$water[india$female == 0])
 ```
 
-**Answer**: Answers here.
-
+**Answer**: [1] 14.73832
 ---
 
 ### 4. What is the estimated average causal effect of having a female politician on the number of new (or repaired) drinking water facilities? (2 points)
 
 
 ```{r}
-## Coding answers here
+## mean(india$water[india$female == 1])- mean(india$water[india$female == 0])
 ```
 
-**Answer**: Put your answers here.
+**Answer**: [1] 9.252423
 
 ---
 
@@ -76,7 +75,7 @@ In this problem set, we will practice loading, making sense of data, and underst
   b. Approximately how many villages in this experiment had about 250 new (or repaired) drinking water facilities since the randomization of politicians? (0.5 points)
 
 ```{r}        
-## Coding answers here
+## ggplot(india, aes(x=water))+geom_histogram()
 ```
 
 **Answers**: Answers here.
@@ -91,10 +90,10 @@ In this problem set, we will practice loading, making sense of data, and underst
   b. Does the relationship between these two variables look strongly linear? A yes/no answer will suffice. (0.5 points) 
 
 ```{r}
-## Coding answers here
+## barplot(india$water[india$irrigation == 1])
 ```
 
-**Answers**: Answers here.
+**Answers**: a. positive b. no
 
 (Hint: a scatter plot is the graphical representation of the relationship between two variables. The function in R to create a scatter plot with the fitting line is:
 
@@ -113,10 +112,10 @@ It requires three arguments: (1) the name you saved the dataset; (2) the code id
   b. And are you surprised by the absolute value of the correlation? Provide your reason. (0.5 points)
 
 ```{r}
-## Coding answers here
+## cor(india$water,india$irrigation)
 ```
 
-**Answers**: Answers here.
+**Answers**: a. no, both building of infrastructure followed suit with repairing water systems by the hands of politicians b. no, the value did not surprise me due to the fact that they are close in correlation 
 
 (Hint: the function in R to compute a correlation coefficient is \fu{cor()}. It requires two arguments (separated by a comma) and in no particular order: the code identifying each of the two variables.) 
 
@@ -124,10 +123,10 @@ It requires three arguments: (1) the name you saved the dataset; (2) the code id
 
 ### 8. If we wanted to use the sample of villages in this dataset to infer the characteristics of all villages in India, we would have to make sure that the sample is _____________ of the population of all villages. (Please provide the missing word). (1 point)
 
-**Answer**: Answers here.
+**Answer**: representative 
 
 ---
 
 ### 9. What would have been the best way of selecting the villages for the sample to ensure that the statement above was true? (1 point)
 
-**Answer**: Answers here.
+**Answer**: A random sample or selection of the Indian villages would be best to ensure the statement above is correct. This would better help to infer the characteristics of all villages in India. 
