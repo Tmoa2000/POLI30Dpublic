@@ -1,6 +1,6 @@
 ---
 title: "POLI 30 D"
-author: "Your name here"
+author: "Teuilatausala Moa"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ In this problem set, we will practice loading, making sense of data, and underst
 
 
 ```{r}
-# Your coding answers here.
+# india<-read.csv("https://raw.githubusercontent.com/umbertomig/POLI30Dpublic/main/data/india.csv")
 ```
 
 ---
@@ -33,27 +33,27 @@ In this problem set, we will practice loading, making sense of data, and underst
 2. Use the function `head()` to view the first few observations of the dataset. Provide the R code you used. (1 point)
 
 ```{r}
-# Your coding answers here.
+# head(india)
 ```
 
 ---
 
 3. What does each observation in this dataset represent? Please substantively interpret the first observation in the dataset. (1 point)
 
-**Answer:** Change this line to type your answer here.
+**Answer:** help(head)
 
 ---
 
 4. For each variable in the dataset, please identify the type of variable (character vs. numeric binary vs. numeric non-binary) (1 point)
 
-**Answer:** Change this line to type your answer here.
+**Answer:** help(head)
 
 ---
 
 5. How many observations are in the dataset? In other words, how many villages were part of this experiment? (Hint: the function `dim()` might be helpful here.) (1 point)
 
 ```{r}
-# Your coding answers here.
+# dim(india)
 ```
 
 ---
@@ -61,20 +61,20 @@ In this problem set, we will practice loading, making sense of data, and underst
 6. Use the function `mean()` to calculate the average of the variable *female*. Please provide a full substantive interpretation of what this average means. (1 point)
 
 ```{r}
-# Your coding answers here.
+# mean(india$female)
 ```
 
-**Answer:** Change this line to type your answer here.
+**Answer:** [1] 0.3354037
 
 ---
 
 7. Use the function `mean()` to calculate the average of the variable *water*. Please provide a full substantive interpretation of what this average means. Make sure to provide the unit of measurement. (1 point)
 
 ```{r}
-# Your coding answers here.
+# mean(india$water)
 ```
 
-**Answer:** Change this line to type your answer here.
+**Answer:** [1] 17.84161
 
 ---
 
@@ -82,7 +82,8 @@ In this problem set, we will practice loading, making sense of data, and underst
     a. What would be the treatment variable? Please provide the name of the variable
     b. What would be the outcome variable? Please provide the name of the variable
 
-**Answer:** Change this line to type your answer here.
+**Answer:** a. Treatment variable is female which indicates if a female is head politician of the village, variable is under the name female
+b. Outcome variable is drinking water facilities, variable is under tha name water
 
 ---
 
@@ -90,7 +91,8 @@ In this problem set, we will practice loading, making sense of data, and underst
     a. What would be the treatment variable? Please provide the name of the variable
     b. What would be the outcome variable? Please provide the name of the variable
 
-**Answer:** Change this line to type your answer here.
+**Answer:** a. the treatment variable is still female, which represents the villages that are ran by female politicians
+b. the outcome variable this time is irrigation, which represents the quantitiy of irrigation faciltiies built in villages. 
 
 ---
 
@@ -98,4 +100,5 @@ In this problem set, we will practice loading, making sense of data, and underst
     a. What would be the treatment group?
     b. What would be the control group?
 
-**Answer:** Change this line to type your answer here.
+**Answer:** a. the treatment group is a women lead village. 
+b. control group is male lead village 
